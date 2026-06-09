@@ -1,24 +1,109 @@
-<!--
- Menu Bootstrap
- Les liens utilisent ?page=
--->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
  <div class="container-fluid">
  <a class="navbar-brand" href="?page=home">Cyber Blog</a>
- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-data-bs-target="#nav">
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
  <span class="navbar-toggler-icon"></span>
  </button>
  <div class="collapse navbar-collapse" id="nav">
- <ul class="navbar-nav">
+ <ul class="navbar-nav me-auto mb-2 mb-lg-0">
  <li class="nav-item">
  <a class="nav-link" href="?page=home">Accueil</a>
  </li>
  <li class="nav-item">
  <a class="nav-link" href="?page=team">Équipe</a>
  </li>
- <li class="nav-item">
- <a class="nav-link" href="?page=room-example">Room Exemple</a>
+
+ <li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ Partie I
+ </a>
+ <ul class="dropdown-menu">
+ <li><h6 class="dropdown-header">Start Your Cyber Security Journey</h6></li>
+ <li><a class="dropdown-item" href="?page=offensive-security">Offensive Security Intro</a></li>
+ <li><a class="dropdown-item" href="?page=defensive-security">Defensive Security Intro</a></li>
+ <li><a class="dropdown-item" href="?page=search-skills">Search Skills</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Linux Fundamentals</h6></li>
+ <li><a class="dropdown-item" href="?page=linux-part-1">Linux Fundamentals Part 1</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Windows and AD Fundamentals</h6></li>
+ <li><a class="dropdown-item" href="?page=windows-1">Windows Fundamentals 1</a></li>
+ <li><a class="dropdown-item" href="?page=windows-2">Windows Fundamentals 2</a></li>
+ <li><a class="dropdown-item" href="?page=windows-3">Windows Fundamentals 3</a></li>
+ <li><a class="dropdown-item" href="?page=ad-basics">Active Directory Basics</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Command Line</h6></li>
+ <li><a class="dropdown-item" href="?page=windows-cmd">Windows Command Line</a></li>
+ </ul>
+ </li>
+
+ <li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ Partie II
+ </a>
+ <ul class="dropdown-menu">
+ <li><h6 class="dropdown-header">Introduction to Cyber Security</h6></li>
+ <li><a class="dropdown-item" href="?page=careers-in-cyber">Careers in Cyber</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Network Fundamentals</h6></li>
+ <li><a class="dropdown-item" href="?page=what-is-networking">What is Networking?</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">How The Web Works</h6></li>
+ <li><a class="dropdown-item" href="?page=dns-in-detail">DNS in detail</a></li>
+ <li><a class="dropdown-item" href="?page=http-in-detail">HTTP in Detail</a></li>
+ <li><a class="dropdown-item" href="?page=how-websites-work">How Websites Work</a></li>
+ <li><a class="dropdown-item" href="?page=putting-it-together">Putting it all together</a></li>
+ </ul>
+ </li>
+
+ <li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ Partie III
+ </a>
+ <ul class="dropdown-menu">
+ <li><h6 class="dropdown-header">Networking & Crypto</h6></li>
+ <li><a class="dropdown-item" href="?page=networking-concepts">Networking Concepts</a></li>
+ <li><a class="dropdown-item" href="?page=crypto-basics">Cryptography Basics</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Exploitation Basics</h6></li>
+ <li><a class="dropdown-item" href="?page=moniker-link">Moniker Link (CVE-2024-21413)</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Metasploit: Intro</h6></li>
+ <li><a class="dropdown-item" href="?page=blue">Blue</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Web Hacking</h6></li>
+ <li><a class="dropdown-item" href="?page=web-app-basics">Web Application Basics</a></li>
+ <li><a class="dropdown-item" href="?page=owasp-iaaa">OWASP: IAAA Failures</a></li>
+ <li><a class="dropdown-item" href="?page=owasp-design">OWASP: Application Design Flaws</a></li>
+ <li><a class="dropdown-item" href="?page=owasp-data">OWASP: Insecure Data Handling</a></li>
+ 
+ <li><hr class="dropdown-divider"></li>
+ <li><h6 class="dropdown-header">Common Attacks</h6></li>
+ <li><a class="dropdown-item" href="?page=common-attacks">Common Attacks</a></li>
+ </ul>
+ </li>
+
+ <li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ Spéciales
+ </a>
+ <ul class="dropdown-menu">
+ <li><a class="dropdown-item" href="?page=firebase">Services Firebase</a></li>
+ <li><a class="dropdown-item" href="?page=structure">Structure de page</a></li>
+ <li><a class="dropdown-item" href="?page=orga">Organisation Groupe</a></li>
+ <li><a class="dropdown-item" href="?page=vpn">Connexion VPN</a></li>
+ <li><a class="dropdown-item" href="?page=lotl">Living Off The Land</a></li>
+ <li><a class="dropdown-item" href="?page=mitm">Man In The Middle</a></li>
+ <li><a class="dropdown-item" href="?page=profils">Profils des membres</a></li>
+ </ul>
  </li>
  </ul>
  </div>

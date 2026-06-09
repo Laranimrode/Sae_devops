@@ -1,17 +1,41 @@
-/**
-* Liste des pages AUTORISÉES
-* 👉 évite qu’un utilisateur charge n’importe quel fichier (sécurité)
-*/
 const allowedPages = [
  "home",
  "team",
- "room-example"
+ "room-example",
+ "offensive-security",
+ "defensive-security",
+ "search-skills",
+ "linux-part-1",
+ "windows-1",
+ "windows-2",
+ "windows-3",
+ "ad-basics",
+ "windows-cmd",
+ "careers-in-cyber",
+ "what-is-networking",
+ "dns-in-detail",
+ "http-in-detail",
+ "how-websites-work",
+ "putting-it-together",
+ "networking-concepts",
+ "crypto-basics",
+ "moniker-link",
+ "blue",
+ "web-app-basics",
+ "owasp-iaaa",
+ "owasp-design",
+ "owasp-data",
+ "common-attacks",
+ "firebase",
+ "structure",
+ "orga",
+ "vpn",
+ "lotl",
+ "mitm",
+ "profils"
 ];
-/**
-* Charge dynamiquement une page HTML dans #content
-*/
+
 function loadPage(page) {
- // Sécurité : vérification whitelist
  if (!allowedPages.includes(page)) {
  page = "home";
  }
@@ -30,16 +54,12 @@ function loadPage(page) {
  "<h1>404 - Page non trouvée</h1>";
  });
 }
-/**
-* Récupère le paramètre ?page=
-*/
+
 function getPageFromURL() {
  const params = new URLSearchParams(window.location.search);
  return params.get("page") || "home";
 }
-/**
-* Initialisation du router
-*/
+
 document.addEventListener("DOMContentLoaded", () => {
  const page = getPageFromURL();
  loadPage(page);
