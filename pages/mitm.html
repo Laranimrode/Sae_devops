@@ -1,1 +1,21 @@
-<h1>Man In The Middle</h1>
+<h1>L'attaque Man-In-The-Middle (MITM)</h1>
+
+<section>
+ <h3>Introduction et Origines</h3>
+ <p>L'attaque Man-In-The-Middle (MITM), ou "homme au milieu", est une technique de piratage où un attaquant s'interpose secrètement entre deux machines qui communiquent. Ce concept existe depuis bien avant l'informatique. À l'origine, cela s'apparentait à de l'espionnage postal classique, où des lettres étaient interceptées, lues ou modifiées avant d'être renvoyées au destinataire. Cette méthode a ensuite été utilisée sur les lignes télégraphiques et téléphoniques pendant les guerres. Avec l'arrivée d'Internet, comme les protocoles de base n'intégraient pas de sécurité par défaut, l'attaque est devenue très courante dans le monde numérique.</p>
+</section>
+
+<section>
+ <h3>Fonctionnement Technique</h3>
+ <p>Le principe est simple : casser la communication directe entre un utilisateur (le client) et un site web (le serveur). L'attaquant configure son ordinateur pour intercepter tout le trafic. Il fait croire à l'utilisateur qu'il est le serveur, et inversement. L'attaque se déroule en deux étapes : d'abord, on détourne le flux réseau pour qu'il passe par la machine du pirate, puis on analyse ou modifie les données. Si le trafic n'est pas chiffré, le pirate peut facilement récupérer des identifiants, des mots de passe ou des cookies de session sans que les victimes ne s'en aperçoivent.</p>
+</section>
+
+<section>
+ <h3>Méthodes Courantes d'Interception</h3>
+ <p>Il existe plusieurs méthodes techniques pour réaliser cette interception sur un réseau. L'empoisonnement de cache ARP (ARP Spoofing) permet de détourner le trafic sur un réseau local en usurpant l'identité du routeur. Le détournement DNS (DNS Spoofing) modifie les réponses du serveur de noms pour rediriger l'utilisateur vers un faux site web. Enfin, la création d'un faux point d'accès Wi-Fi (Rogue Access Point) permet de piéger les utilisateurs qui s'y connectent volontairement dans les lieux publics.</p>
+</section>
+
+<section>
+ <h3>Conclusion et Mesures de Protection</h3>
+ <p>Pour se protéger efficacement, la meilleure solution reste l'utilisation systématique du protocole HTTPS (chiffrement TLS), qui rend les données interceptées totalement illisibles. On peut aussi configurer des sécurités sur les commutateurs réseau (comme le Dynamic ARP Inspection) ou utiliser un VPN sur les réseaux publics. Comprendre ces risques est essentiel pour sécuriser le déploiement de nos applications dans cette SAE DevOps.</p>
+</section>

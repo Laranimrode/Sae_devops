@@ -1,1 +1,21 @@
-<h1>Living Off The Land</h1>
+<h1>Living Off The Land (LotL)</h1>
+
+<section>
+ <h3>Concept et Définition</h3>
+ <p>Le "Living Off The Land" (LotL) est une méthode d'attaque où les pirates utilisent uniquement des outils et des fichiers déjà installés de base sur le système de la victime (Windows ou Linux). Au lieu d'apporter des virus ou des logiciels malveillants externes qui se feraient bloquer par les antivirus, l'attaquant détourne des fonctions administratives tout à fait légitimes pour compromettre la cible.</p>
+</section>
+
+<section>
+ <h3>Avantages pour les Attaquants</h3>
+ <p>Le grand avantage de cette technique pour les pirates est la discrétion. Comme les outils utilisés sont officiels et signés par l'éditeur du système (comme Microsoft), les outils de défense comme les antivirus ou les EDR les considèrent comme sûrs. Les attaquants peuvent donc fouiller le réseau, voler des données ou se déplacer de machine en machine sans déclencher d'alertes de sécurité, ce qui rend l'attaque très difficile à détecter.</p>
+</section>
+
+<section>
+ <h3>Binaires Légitimes Détournés (LOLBins)</h3>
+ <p>Sur un environnement Windows, les pirates détournent souvent des outils puissants comme PowerShell, l'invite de commande (cmd.exe) ou WMIC. Ces programmes permettent d'exécuter des commandes directement dans la mémoire de l'ordinateur sans laissant de traces sur le disque dur. Sous Linux, ils utilisent des outils classiques de transfert de fichiers ou des interpréteurs comme Python pour exfiltrer des données. Ces outils officiels détournés de leur fonction d'origine sont appelés des "LOLBins" (Living Off The Land Binaries).</p>
+</section>
+
+<section>
+ <h3>Conclusion et Stratégies de Détection</h3>
+ <p>On ne peut pas simplement bloquer ces outils car le système et les administrateurs en ont besoin pour travailler. Pour se défendre, il faut donc surveiller les comportements. Les systèmes de sécurité doivent analyser si un outil légitime (comme PowerShell) est utilisé de manière anormale, par exemple à des horaires étranges ou par un utilisateur qui n'a rien à voir avec l'administration. C'est une notion cruciale à intégrer pour assurer la sécurité de nos infrastructures.</p>
+</section>
