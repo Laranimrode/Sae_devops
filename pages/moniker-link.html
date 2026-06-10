@@ -1,11 +1,11 @@
 <h1>Moniker Link (CVE-2024-21413)</h1>
 <section>
  <h3>Contexte</h3>
- <p>Description du laboratoire</p>
+ <p>Cette room est dédié à la vulnérabilité CVE-2024-21413, une faille qui permet d'executer du code à distance et récupérer une fuite d'informations d'identification affectant Microsoft Office. L'objectif est de comprendre comment la faille fonctionne, et comment elle exploite le composant COM de Windows, permet de contourner les protections d'Outlook.</p>
 </section>
 <section>
  <h3>Ce que nous avons compris</h3>
- <p>Explication personnelle</p>
+ <p>Pour réussir les exercices, il m'a fallu comprendre que le coeur du problème était dans la manipulation des liens. En utilisant des caractères spéciaux dans des liens hypertexte (protocole file://), on arrive à forcer une requête SMB vers une cible contrôlée par l'attaquant. Le but, c'est de comprendre pourquoi la requête automatique envoie le hash NTLM de l'utilisateur quand le lien est mal formaté. En gros, le labo montre que si tu modifies la structure du lien en ajoutant des caractères spéciaux, on fais sauter les sécurités d'Outlook. C'est une manipulation qui expose vraiment le point faible des composants COM de Windows. </p>
 </section>
 <section>
  <h3>Vidéo</h3>
@@ -16,5 +16,5 @@
 </section>
 <section>
  <h3>Conclusion</h3>
- <p>Retour d’expérience</p>
+ <p>Cette room est vraiment intéressante pour comprendre comment des fonctionnalités Windows légitimes (comme le COM ou le SMB) peuvent être détournées. Même si c'est une faille assez technique, c'est utile de voir comment une simple modification de lien peut compromettre tout un système. Ça rappelle à quel point il est crucial de maintenir ses logiciels à jour, surtout quand on sait qu'une faille avec un score de 9.8 peut passer outre les protections de base d'Outlook. Cette room a été une découverte pour moi qui ne connaissais pas cette faille.</p>
 </section>
