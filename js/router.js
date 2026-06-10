@@ -1,4 +1,5 @@
 const allowedPages = [
+ "Metasploit",
  "home",
  "team",
  "room-example",

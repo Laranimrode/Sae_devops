@@ -1,11 +1,13 @@
 <h1>Blue</h1>
 <section>
  <h3>Contexte</h3>
- <p>Description du laboratoire</p>
+ <p>Le but de cette room était d'exploiter une machine vulnérable en utilisant des outils qu'on avait déjà vus, comme Nmap ou Metasploit. L'objectif était de récupérer les infos demandées, de faire une élévation de privilèges pour passer admin, et au final de pouvoir craquer les mots de passe pour récupérer les flags cachés dans les fichiers utilisateurs.</p>
 </section>
 <section>
  <h3>Ce que nous avons compris</h3>
- <p>Explication personnelle</p>
+ <p>Pour commencer, j'ai lancé un scan Nmap avec les options de détection de vulnérabilités (--script vuln) pour confirmer que la machine était bien exposée à MS17-010. Une fois l'info confirmée, je suis passé sur msfconsole pour charger l'exploit EternalBlue. Après avoir configuré l'adresse IP de la cible (RHOSTS) et mon adresse en écoute, j'ai lancé l'exploitation qui m'a ouvert une première session Meterpreter (permet aux utilisateurs de contrôler un appareil à l'aide de VNC et de parcourir, charger et télécharger des fichiers).
+
+Ensuite j'ai utilisé des commandes pour scanner les vulnérabilités locales de la machine et appliquer le bon exploit pour passer en SYSTEM. Une fois les droits élevés, j'ai récupéré les hashs de l'utilisateur, que j'ai passés dans un outil de craquage pour obtenir le mot de passe en clair (John). Avec ces identifiants, j'ai pu naviguer librement dans les répertoires de l'utilisateur pour localiser et lire les fichiers contenant les flags. Comme c’était la première fois que j’enchaînais toute cette chaîne d’exploitation, la prise en main a été très, très dure : entre gérer la session Meterpreter, jongler avec l'élévation de privilèges et manipuler les hashs, c'est pas évident de tout faire marcher du premier coup sans se planter dans les commandes.</p>
 </section>
 <section>
  <h3>Vidéo</h3>
@@ -16,5 +18,5 @@
 </section>
 <section>
  <h3>Conclusion</h3>
- <p>Retour d’expérience</p>
+ <p>C'est la room la plus intéressante que j'ai faite, mais surtout la plus compliquée. On devait utiliser des outils qu'on n'utilise que très rarement comme Metasploit que je venais de découvrir, donc j'ai dû passer beaucoup de temps sur internet pour comprendre ce que je devais faire et surtout comment m'y prendre. C'était la première fois que j'enchaînais toute la chaîne d'exploitation comme ça, et la prise en main a été très, très dure. Même si j'ai réussi à finir, si je devais refaire la room maintenant, j'aurais sûrement encore besoin d'internet, surtout pour toute la partie sur l'élévation de privilèges qui reste bien complexe et l'utilisation des exploits.</p>
 </section>
