@@ -1,1 +1,24 @@
-<h1>Structure de page</h1>
+<section>
+ <h2>Structure et Arborescence du Projet</h2>
+ <p>Pour maintenir un code propre et scalable, nous avons organisé les fichiers du site selon une architecture logique. Voici l'arborescence complète de notre dossier de travail :</p>
+ 
+ <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; font-family: monospace;">
+sae-devops-but2/
+├── .firebase/                  # Fichiers de cache et historiques de Firebase
+├── pages/                      # Dossier regroupant les vues HTML (comptes-rendus)
+│   ├── blue.html
+│   ├── careers-in-cyber.html
+│   ├── common-attacks.html
+│   ├── firebase.html
+│   ├── tasks-distribution.html # Cette page
+│   └── ... (autres rooms TryHackMe)
+├── .firebaserc                 # Liaison au projet Firebase (saedevopsbut2)
+├── .gitignore                  # Fichiers exclus du suivi Git (node_modules, etc.)
+├── firebase.json               # Configuration du comportement de Firebase Hosting
+├── index.html                  # Point d'entrée unique de l'application (Single-Page)
+├── router.js                   # Moteur de routage dynamique en JavaScript
+└── styles.css                  # Charte graphique et feuilles de style globales
+ </pre>
+
+ <p>Chaque nouvelle page de compte-rendu est simplement créée dans le dossier <code>pages/</code>, puis déclarée dans le fichier <code>router.js</code> pour être instantanément fonctionnelle et accessible via le menu.</p>
+</section>
