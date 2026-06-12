@@ -1,1 +1,22 @@
-<h1>Services Firebase</h1>
+<h1>Déploiement avec Firebase</h1>
+
+<section>
+ <h3>Contexte</h3>
+ <p>Pour finaliser notre projet de SAE et rendre nos comptes-rendus accessibles à nos professeurs, nous devions mettre notre site en ligne. Nous avons utiliser Firebase Hosting, une plateforme de Google qui permet d'héberger des sites web statiques de manière sécurisée, rapide et gratuite. L'objectif était de passer d'un environnement de développement local à une infrastructure de production accessible partout.</p>
+</section>
+
+<section>
+ <h3>Ce que nous avons compris (Le Tutoriel)</h3>
+ <p>Nous avons compris que le déploiement sur Firebase se gère entièrement en ligne de commande via le terminal et se résume en quatre étapes clés :</p>
+ <ul>
+  <li><strong>L'installation :</strong> On installe d'abord les outils Firebase de manière globale sur la machine avec la commande <code>npm install -g firebase-tools</code>.</li>
+  <li><strong>L'authentification :</strong> On connecte notre terminal à notre compte Google en tapant <code>firebase login</code>, ce qui ouvre une page de validation sur le navigateur.</li>
+  <li><strong>L'initialisation :</strong> C'est l'étape cruciale où on configure le projet avec <code>firebase init hosting</code>. Pour coller à notre structure, il faut spécifier le point (<code>.</code>) pour indiquer que nos fichiers sont à la racine (et pas dans un dossier public). Il faut aussi configurer le projet en "Single-Page App" (MFA/SPA) : cette option demande à Firebase de rediriger toutes les requêtes vers notre <code>index.html</code>, ce qui est indispensable pour que notre script <code>router.js</code> puisse gérer les routes sans générer d'erreurs 404 lors du rafraîchissement d'une page.</li>
+  <li><strong>Le déploiement :</strong> Une fois la configuration terminée, il suffit de lancer <code>firebase deploy</code> pour envoyer les fichiers sur les serveurs de Google et obtenir notre URL finale.</li>
+ </ul>
+</section>
+
+<section>
+ <h3>Conclusion</h3>
+ <p>Firebase Hosting s'est avéré être un outil extrêmement efficace et parfaitement adapté à notre projet. Pour notre SAE DevOps, cette manipulation est une excellente introduction aux problématiques de mise en production et de serveurs web. Le flux de travail est très fluide : chaque fois que nous modifions notre code ou ajoutons un nouveau compte-rendu de room TryHackMe, il nous suffit de retaper une seule commande pour que le site en ligne se mette à jour instantanément.</p>
+</section>
